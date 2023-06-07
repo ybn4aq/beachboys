@@ -17,6 +17,12 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
 
+const highscoresRouter = require('./routes/highscores');
+const usersRouter = require('./routes/users.js');
+
+app.use('/highscores', highscoresRouter);
+app.use('/users', usersRouter);
+
 app.listen(port, () => {
     console.log('Server is running on port: ' + port);
 });

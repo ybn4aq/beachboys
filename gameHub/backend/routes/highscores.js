@@ -4,7 +4,9 @@ let HighScore = require('../models/highscore.models');
 
 router.route('/').get((req, res) => {
     HighScore.find()
-        .then(highscores => res.json(highscores))
+        .then(highscores => {
+            res.json(highscores)
+        })
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
@@ -43,12 +45,15 @@ router.route('/update/:id').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/clear').delete((req, res) => {
+router.route('/').delete((req, res) => {
+    //has to just be in route '/' or else it wont find any scores
     HighScore.find()
         .then(highscores => {
-            for(var score in highscores){
-                HighScore.findByIdAndDelete(score._id)
+            for (var i=0; i < highscores.length; i++){
+                HighScore.findByIdAndDelete(highscores[i]._id);
+                //isnt able to access id - highscores might not contain the score schemas??
             }
+            res.json('All scores deleted')
         })
         .catch(err => res.status(400).json('Error: ' + err));
 });

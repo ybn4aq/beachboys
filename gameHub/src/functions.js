@@ -1,1 +1,0 @@
-var events = require('events');

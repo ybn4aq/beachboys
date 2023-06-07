@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "./todo.js";
 
 function App() {
   return (
     <div>
+      <a href = "https://google.com"></a>
       <button type="button" class="btn">
         Add Item
       </button>

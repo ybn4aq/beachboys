@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "./todo.js";
 
 function App() {
   return (
     <div>
       <button type="button" class="btn">
-        Base class
+        Add Item
       </button>
     </div>
   );

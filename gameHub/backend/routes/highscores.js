@@ -45,6 +45,7 @@ router.route('/update/:id').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+//clear all highscores
 router.route('/').delete((req, res) => {
     //has to just be in route '/' or else it wont find any scores
     HighScore.find()
@@ -56,6 +57,20 @@ router.route('/').delete((req, res) => {
             }
             res.json('All scores deleted')
         })
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+//find all high scores for username
+router.route('/getbyuser/:username').get((req, res) => {
+    HighScore.find({username: req.params.username})
+        .then(highscore => res.json(highscore))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+//find all high scores for game
+router.route('/getbygame/:game').get((req, res) => {
+    HighScore.find({game: req.params.game})
+        .then(highscore => res.json(highscore))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 

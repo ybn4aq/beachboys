@@ -50,8 +50,9 @@ router.route('/').delete((req, res) => {
     HighScore.find()
         .then(highscores => {
             for (var i=0; i < highscores.length; i++){
-                HighScore.findByIdAndDelete(highscores[i]._id);
-                //isnt able to access id - highscores might not contain the score schemas??
+                HighScore.findByIdAndDelete(highscores[i]._id)
+                    .catch(err => res.status(400).json('Error: ' + err));
+                //sometimes doesnt work for given object id?
             }
             res.json('All scores deleted')
         })

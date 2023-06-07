@@ -5,10 +5,11 @@ import "bootstrap/dist/css/bootstrap.css";
 function App() {
   return (
     <div>
-      <a href = "https://google.com"></a>
-      <button type="button" class="btn">
-        Add Item
-      </button>
+      <a href="https://google.com">
+        <button type="button" class="btn">
+          Add Item
+        </button>
+      </a>
     </div>
   );
 }

@@ -18,10 +18,10 @@ function App() {
       >
         <Router>
           <NavBar />
-          <br />
+          
           <Routes>
-            <Route path="/" exact component={HighScoresList} />
-            <Route path="/create" exact component={CreateScore} />
+            <Route path="/" exact element={<HighScoresList />} />
+            <Route path="/create" element={<CreateScore />} />
           </Routes>
         </Router>
       </div>

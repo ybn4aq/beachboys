@@ -9,14 +9,22 @@ import NavBar from "./components/navbar.component";
 function App() {
   return (
     <>
-      <Router>
-        <NavBar />
-        <br />
-        <Routes>
-          <Route path="/" exact component={HighScoresList} />
-          <Route path="/create" exact component={CreateScore} />
-        </Routes>
-      </Router>
+      <div
+        style={{
+          position: "absolute",
+          top: "0%",
+          left: "0%",
+        }}
+      >
+        <Router>
+          <NavBar />
+          <br />
+          <Routes>
+            <Route path="/" exact component={HighScoresList} />
+            <Route path="/create" exact component={CreateScore} />
+          </Routes>
+        </Router>
+      </div>
     </>
   );
 }

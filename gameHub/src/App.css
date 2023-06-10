@@ -5,8 +5,16 @@
   text-align: center;
 }
 
-.navbar, .navbar-brand, .navbar-nav, .navbar-nav>li, .navbar-item {
+.navbar, .navbar-brand, .navbar-nav, .navbar-nav>li {
   float:none;
+  text-align: left;
+}
+
+.navbar-item, .nav-link{
+  float:left;
+  text-align:left;
+  white-space:nowrap;
+  align-self: left;
 }
 
 .navbar-nav {
@@ -14,5 +22,5 @@
 }
 
 .navbar-nav>li {
-  flex: 1;
+  flex:1;
 }

@@ -14,6 +14,9 @@ export default class NavBar extends Component {
                         <li className="navbar-item  ms-2">
                             <Link to="/create" className="nav-link">Create Score</Link>
                         </li>
+                        <li className="navbar-item  ms-2">
+                            <Link to="/play" className="nav-link">Play Game</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>

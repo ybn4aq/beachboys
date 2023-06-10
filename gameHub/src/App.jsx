@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HighScoresList from "./components/highscores-list.component";
 import CreateScore from "./components/create-score.component";
 import NavBar from "./components/navbar.component";
+import PlayGame from "./components/play-game.component";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<HighScoresList />} />
             <Route path="/create" element={<CreateScore />} />
+            <Route path="/play" element={<PlayGame />} />
           </Routes>
         </Router>
       </div>

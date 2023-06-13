@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import gameHubLogo from '/gameHubLogo.png'
 
 export default class GameHub extends Component {
   render() {
     return (
-      <div>
-        <p> ur on home page</p>
-      </div>
+      <img src={gameHubLogo} class="img-fluid" alt="gameHub logo"></img>
     );
   }
 }

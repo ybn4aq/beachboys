@@ -6,6 +6,7 @@ import HighScoresList from "./components/highscores-list.component";
 import CreateScore from "./components/create-score.component";
 import NavBar from "./components/navbar.component";
 import PlayGame from "./components/play-game.component";
+import GameHub from "./components/gamehub.component";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
             left: "0%",
             whitespace:"nowrap"
           }}>
-            <Route path="/" exact element={<HighScoresList />} />
+            <Route path="/" exact element={<GameHub />} />
+            <Route path="/highscores" element={<HighScoresList />} />
             <Route path="/create" element={<CreateScore />} />
             <Route path="/play" element={<PlayGame />} />
           </Routes>

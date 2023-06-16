@@ -4,6 +4,7 @@ const PressSpaceBarGame = () => {
   const [timeRemaining, setTimeRemaining] = useState(10);
   const [timerInterval, setTimerInterval] = useState(null);
 
+  // TODO: add a way for the user to start the game
   useEffect(() => {
     startGame();
     return () => {

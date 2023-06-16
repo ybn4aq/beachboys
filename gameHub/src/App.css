@@ -24,3 +24,23 @@
 .navbar-nav>li {
   flex:1;
 }
+
+.rowContainer{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items: center;
+  row-gap:10px;
+  column-gap:80px;
+}
+
+.columnContainer{
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items: center;
+  row-gap:10px;
+  column-gap:30px;
+}

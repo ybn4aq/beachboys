@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default class HighScoresList extends Component {
+export default class Games extends Component {
   render() {
     return (
       <div>
-        <p>ur on high scores list component</p>
+        <p>ur on create scores component</p>
       </div>
     );
   }

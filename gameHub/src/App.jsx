@@ -2,10 +2,10 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HighScoresList from "./components/highscores-list.component";
-import CreateScore from "./components/create-score.component";
+import HighScoresList from "./components/pages/highscores-list.page";
+import Games from "./components/pages/games.page";
+import Login from "./components/pages/login.page";
 import NavBar from "./components/navbar.component";
-import PlayGame from "./components/play-game.component";
 import GameHub from "./components/gamehub.component";
 
 function App() {
@@ -17,19 +17,21 @@ function App() {
           top: "0%",
           width: "100%",
           left: "0%",
-          whitespace:"nowrap"
+          whitespace: "nowrap",
         }}
       >
-        <Router >
+        <Router>
           <NavBar />
-          <Routes style={{
-            left: "0%",
-            whitespace:"nowrap"
-          }}>
+          <Routes
+            style={{
+              left: "0%",
+              whitespace: "nowrap",
+            }}
+          >
             <Route path="/" exact element={<GameHub />} />
             <Route path="/highscores" element={<HighScoresList />} />
-            <Route path="/create" element={<CreateScore />} />
-            <Route path="/play" element={<PlayGame />} />
+            <Route path="/games" element={<Games />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Router>
       </div>

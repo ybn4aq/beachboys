@@ -16,13 +16,13 @@ export default class NavBar extends Component {
               </Link>
             </li>
             <li className="navbar-item  ms-2 ">
-              <Link to="/create" className="nav-link">
-                Create Score
+              <Link to="/games" className="nav-link">
+                Games
               </Link>
             </li>
-            <li className="navbar-item  ms-2">
-              <Link to="/play" className="nav-link me-2">
-                Play Game
+            <li className="navbar-item  ms-2 ">
+              <Link to="/login" className="nav-link">
+                Login
               </Link>
             </li>
           </ul>

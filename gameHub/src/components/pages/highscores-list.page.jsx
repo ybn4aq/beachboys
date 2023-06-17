@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Select from "react-select";
 
 export default class HighScoresList extends Component {
   render() {
@@ -12,6 +13,12 @@ export default class HighScoresList extends Component {
       { username: "User4", game: "Battleship", score: 24 },
       { username: "User5", game: "Mario Kart", score: 24 },
       { username: "User6", game: "Mario Kart", score: 24 },
+    ];
+
+    const filterOptions = [
+      { value: "ticTacToe", label: "Tic Tac Toe" },
+      { value: "battleship", label: "Battleship" },
+      { value: "marioKart", label: "Mario Kart" },
     ];
 
     const usernames = data.map((item, index) => (

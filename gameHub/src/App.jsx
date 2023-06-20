@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HighScoresList from "./components/pages/highscores-list.page";
+import { HighScoresList } from "./components/pages/highscores.page";
 import Games from "./components/pages/games.page";
 import Login from "./components/pages/login.page";
 import NavBar from "./components/navbar.component";

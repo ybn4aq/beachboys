@@ -1,18 +1,17 @@
 import React, { Component, useState } from "react";
 import { scoreData } from "../HighScoresData";
-
-export function HighScoresList() {
+export const HighScoresList = () => {
   const filterOptions = [
     { value: "ticTacToe", label: "Tic Tac Toe" },
     { value: "battleship", label: "Battleship" },
     { value: "marioKart", label: "Mario Kart" },
   ];
 
-  const [filterValue, setFilterValue] = useState("");
-  const handleFilter = (event) => {
-    console.log(event);
-    setFilterValue(event);
-  };
+  // const [filterValue, setFilterValue] = useState("");
+  // const handleFilter = (event) => {
+  //   console.log(event);
+  //   setFilterValue(event);
+  // };
 
   const usernames = scoreData.map((item, index) => (
     <div key={index}>{item.username}</div>
@@ -103,4 +102,4 @@ export function HighScoresList() {
       </div>
     </div>
   );
-}
+};

@@ -7,6 +7,9 @@ import Games from "./components/pages/games.page";
 import Login from "./components/pages/login.page";
 import NavBar from "./components/navbar.component";
 import GameHub from "./components/gamehub.component";
+import { Typer } from "./components/games/Typer.game";
+import { ClickGame } from "./components/games/ClickGame.game";
+import { Matching } from "./components/games/MatchingGame.game";
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
             <Route path="/highscores" element={<HighScoresList />} />
             <Route path="/games" element={<Games />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/typer" element={<Typer />} />
+            <Route path="/click" element={<ClickGame />} />
+            <Route path="/matching" element={<Matching />} />
           </Routes>
         </Router>
       </div>

@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Typer } from "../games/Typer.game";
 import capy1 from "/images/capy1.png";
 import capy2 from "/images/capy2.png";
 import capy3 from "/images/capy3.png";
@@ -42,8 +40,6 @@ const AboutUs = () => {
             <img
               src={member.image}
               alt={member.name}
-              width={300}
-              height={250}
             />
             <div className="card-content">
               <h3>{member.name}</h3>

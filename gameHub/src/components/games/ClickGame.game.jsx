@@ -1,5 +1,8 @@
 import React from "react";
 
-export const ClickGame = () => {
-  return <div></div>;
-};
+export default class ClickGame extends React.Component {
+  state = {
+    curScore: 0,
+    timeLeft: 10,
+  };
+}

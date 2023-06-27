@@ -25,6 +25,11 @@ export default class NavBar extends Component {
                 Login
               </Link>
             </li>
+            <li className="navbar-item ms-2">
+              <Link to="/about" className="nav-link">
+                About Us
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

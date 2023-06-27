@@ -10,6 +10,8 @@ import GameHub from "./components/gamehub.component";
 import { Typer } from "./components/games/Typer.game";
 import { ClickGame } from "./components/games/ClickGame.game";
 import { Matching } from "./components/games/MatchingGame.game";
+import About from "./components/pages/about.page";
+import AboutUs from "./components/pages/about.page";
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
               whitespace: "nowrap",
             }}
           >
+            <Route path = "/about" exact element = {<AboutUs />}/>
             <Route path="/" exact element={<GameHub />} />
             <Route path="/highscores" element={<HighScoresList />} />
             <Route path="/games" element={<Games />} />

@@ -52,3 +52,5 @@ class ClickGame extends React.Component {
     );
   }
 }
+
+export default ClickGame;

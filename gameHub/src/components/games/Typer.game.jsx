@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import words from "./tongueTwisters";
+import {words} from "./tongueTwisters";
 import { COLORS } from "../colors";
 
 export const Typer = () => {
@@ -8,12 +8,21 @@ export const Typer = () => {
   const [coloredPhrase, setColoredPhrase] = useState([]);
   const [winStatement, setWinStatement] = useState(true);
   const [start, setStart] = useState(true);
+  let arr = []
 
-  let arr = words.sort((a, b) => a.length - b.length)
+  let wordArr = words.sort((a, b) => a.length - b.length)
 
   const setPhraseHandler = (difficulty) => {
     let phrase = "";
-    
+    if (difficulty == "easy"){
+      phrase = wordArr[Math.floor(Math.random() * 10)]
+    }
+    else if (difficulty == "medium"){
+      phrase = wordArr[Math.floor(Math.random() * 10 + 10)]
+    }
+    else if (difficulty == "hard"){
+      phrase = wordArr[Math.floor(Math.random() * 5 + 20)]
+    }
     setPhrase(phrase);
   };
 
@@ -33,7 +42,6 @@ export const Typer = () => {
         arr.push({ color: COLORS.red });
       }
 
-      console.log(arr);
       setColoredPhrase(arr);
     }
   };
@@ -60,9 +68,9 @@ export const Typer = () => {
         }}
       >
         <option value="default">Select difficulty</option>
-        <option value="easy">Easy (3 words)</option>
-        <option value="medium">Medium (10 words)</option>
-        <option value="hard">Hard (20 words)</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
       </select>
       <div hidden={start}>
         <label>Type the following: </label>

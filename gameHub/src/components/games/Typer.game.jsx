@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import dictionary from "an-array-of-english-words"; // had to run npm install an-array-of-english-words
+import words from "./tongueTwisters";
 import { COLORS } from "../colors";
 
 export const Typer = () => {
@@ -8,21 +8,12 @@ export const Typer = () => {
   const [coloredPhrase, setColoredPhrase] = useState([]);
   const [winStatement, setWinStatement] = useState(true);
   const [start, setStart] = useState(true);
-  let arr = [];
+
+  let arr = words.sort((a, b) => a.length - b.length)
 
   const setPhraseHandler = (difficulty) => {
     let phrase = "";
-    let max = dictionary.length;
-    let level = 0;
-    if (difficulty === "easy") level = 3;
-    else if (difficulty === "medium") level = 10;
-    else level = 20;
-    for (let i = 0; i < level; i++) {
-      let wordIndex = Math.floor(Math.random() * max);
-      let word = String(dictionary[wordIndex]);
-      if (i != 0) phrase += " ";
-      phrase += word;
-    }
+    
     setPhrase(phrase);
   };
 
